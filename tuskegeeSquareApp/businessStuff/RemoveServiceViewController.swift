@@ -13,8 +13,8 @@ import FirebaseDatabase
 
 class RemoveServiceViewController: UIViewController {
     @IBOutlet weak var deleteButton: UIButton!
-    
     @IBOutlet weak var cancelButton: UIButton!
+    var ref: DatabaseReference!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

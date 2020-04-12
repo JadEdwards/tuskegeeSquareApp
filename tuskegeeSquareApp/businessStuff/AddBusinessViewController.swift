@@ -64,6 +64,7 @@ class AddBusinessViewController: UIViewController {
         else
         {
             //create cleaned versions of the data
+            
             let businessname = businessNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let businessType = businessTypeTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let businessLocation = businessLocationTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -73,12 +74,18 @@ class AddBusinessViewController: UIViewController {
             db.collection("tuskegeeSquareBusiness").document(businessname).setData(["businessName": businessname, "category": businessType, "location": businessLocation]);
             
             
+            
             let busHomeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.busHomeViewController) as? BusinessHomeViewController
             
             view.window?.rootViewController = busHomeViewController
             view.window?.makeKeyAndVisible()
             
         }//end else, add fields to auth
+    }
+    func getBusiness() -> String{
+        let businessname = businessNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        return businessname
     }
     @IBAction func cancelTapped(_ sender: Any) {
         let profileViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.profileViewController) as? ProfileViewController

@@ -26,6 +26,7 @@ struct Constants{
         static let addServiceViewController = "addServiceVC"
         static let removeServiceViewController = "removeServiceVC"
         static let businessProfileViewController = "businessProfileVC"
+        static let currentBusinessName = ""
         
     }
 }

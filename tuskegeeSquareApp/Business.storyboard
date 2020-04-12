@@ -151,8 +151,7 @@
                                     <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="addServiceButton:" destination="8Rs-98-75a" eventType="touchUpInside" id="8FT-tm-nED"/>
-                                    <action selector="addServicePressed:" destination="8Rs-98-75a" eventType="touchUpInside" id="Orl-C0-DyL"/>
+                                    <action selector="addServiceButton:" destination="8Rs-98-75a" eventType="touchUpInside" id="4Mq-mM-puu"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -247,10 +246,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view verifyAmbiguity="off" contentMode="scaleToFill" horizontalHuggingPriority="1000" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tu2-u8-c6v">
-                                                    <rect key="frame" x="-16" y="3" width="313" height="73"/>
+                                                    <rect key="frame" x="0.0" y="3" width="297" height="73"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Service" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dr4-yg-EdE" userLabel="Add Service">
-                                                            <rect key="frame" x="84" y="19" width="144" height="36"/>
+                                                            <rect key="frame" x="31" y="19" width="144" height="36"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="20"/>
                                                             <nil key="textColor"/>
@@ -280,7 +279,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remove Service" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wbs-JX-e12" userLabel="Remove Service">
-                                                            <rect key="frame" x="56" y="19" width="158" height="36"/>
+                                                            <rect key="frame" x="33" y="19" width="158" height="36"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="18"/>
                                                             <nil key="textColor"/>
@@ -306,10 +305,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view verifyAmbiguity="off" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZZI-qI-goQ">
-                                                    <rect key="frame" x="-27" y="0.0" width="326" height="73"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="299" height="73"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pXD-fF-KZ8">
-                                                            <rect key="frame" x="116" y="14" width="94.000000000000909" height="46"/>
+                                                            <rect key="frame" x="36" y="14" width="94.000000000000909" height="46"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="20"/>
                                                             <nil key="textColor"/>
@@ -335,10 +334,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view verifyAmbiguity="off" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="leq-RZ-zO8">
-                                                    <rect key="frame" x="-27" y="0.0" width="326" height="73"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="299" height="73"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eX2-lR-RxQ">
-                                                            <rect key="frame" x="85" y="14" width="156" height="46"/>
+                                                            <rect key="frame" x="37" y="14" width="156" height="46"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="20"/>
                                                             <nil key="textColor"/>
@@ -364,7 +363,9 @@
                             <outlet property="delegate" destination="m3p-Hw-ESW" id="ZhL-UX-Ouq"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="DDF-at-YTE"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qiM-hA-SQd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
