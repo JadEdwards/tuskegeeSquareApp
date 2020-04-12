@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "2383C9EB-DC55-44D0-BD9C-2E33BBC3C8D1"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "986DA3D0-1256-4BCB-9E53-0590D0FDA454"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "tuskegeeSquareApp/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "AppDelegate"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "986DA3D0-1256-4BCB-9E53-0590D0FDA454 - 237c9879cad0b77c"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tuskegeeSquareApp.AppDelegate.__deallocating_deinit"
+                  moduleName = "tuskegeeSquareApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jade/Desktop/DesktopCopy/tuskegeeSquareApp/tuskegeeSquareApp/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "986DA3D0-1256-4BCB-9E53-0590D0FDA454 - 5be08c0e7a969c5a"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tuskegeeSquareApp.AppDelegate.__allocating_init() -&gt; tuskegeeSquareApp.AppDelegate"
+                  moduleName = "tuskegeeSquareApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jade/Desktop/DesktopCopy/tuskegeeSquareApp/tuskegeeSquareApp/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "986DA3D0-1256-4BCB-9E53-0590D0FDA454 - 8c747e88a531132"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tuskegeeSquareApp.AppDelegate.init() -&gt; tuskegeeSquareApp.AppDelegate"
+                  moduleName = "tuskegeeSquareApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jade/Desktop/DesktopCopy/tuskegeeSquareApp/tuskegeeSquareApp/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "93">
+               </Location>
+               <Location
+                  uuid = "986DA3D0-1256-4BCB-9E53-0590D0FDA454 - fd6831fa2e4e847e"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "tuskegeeSquareApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jade/Desktop/DesktopCopy/tuskegeeSquareApp/tuskegeeSquareApp/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "15">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
