@@ -71,7 +71,7 @@
             let db = Firestore.firestore()
             let user = Auth.auth().currentUser
             
-            db.collection("tuskegeeSquareServices").document(servicename).setData(["businessName": "", "serviceDescription": servicedes, "serviceName": servicename, "servicePrice": serviceprice, "serviceType": servicetype]);
+            db.collection("tuskegeeSquareServices").document(user!.uid).collection("services").addDocument(data:["serviceDescription": servicedes, "serviceName": servicename, "servicePrice": serviceprice, "serviceType": servicetype]);
             
             let bHomeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.busHomeViewController) as? BusinessHomeViewController
             

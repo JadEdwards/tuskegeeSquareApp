@@ -10,6 +10,7 @@ import UIKit
 import FirebaseAuth
 import Firebase
 import FirebaseDatabase
+import FirebaseFirestore
 
 class BusinessHomeViewController: UIViewController{
     let transition = SlideInTransition()
@@ -18,7 +19,8 @@ class BusinessHomeViewController: UIViewController{
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         view.backgroundColor = .white
-    }
+        
+   }
 
     @IBAction func didTapMenu(_ sender: UIBarButtonItem) {
        guard let menuViewController = storyboard?.instantiateViewController(identifier: "MenuViewController") as? MenuViewController else{ return }

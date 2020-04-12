@@ -70,8 +70,9 @@ class AddBusinessViewController: UIViewController {
             let businessLocation = businessLocationTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
             let db = Firestore.firestore()
+            let user = Auth.auth().currentUser
             
-            db.collection("tuskegeeSquareBusiness").document(businessname).setData(["businessName": businessname, "category": businessType, "location": businessLocation]);
+            db.collection("tuskegeeSquareBusiness").document(user!.uid).collection("businesses").addDocument(data:["businessName": businessname, "category": businessType, "location": businessLocation]);
             
             
             
