@@ -19,6 +19,7 @@ class AddBusinessViewController: UIViewController {
     @IBOutlet weak var businessTypeTextField: UITextField!
     @IBOutlet weak var businessLocationTextField: UITextField!
     
+    @IBOutlet weak var accountEmail: UITextField!
     @IBOutlet weak var accountPassword: UITextField!
     var ref: DatabaseReference!
     
@@ -76,6 +77,7 @@ class AddBusinessViewController: UIViewController {
             
             
             
+            
             let busHomeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.busHomeViewController) as? BusinessHomeViewController
             
             view.window?.rootViewController = busHomeViewController
@@ -88,6 +90,7 @@ class AddBusinessViewController: UIViewController {
         
         return businessname
     }
+    
     @IBAction func cancelTapped(_ sender: Any) {
         let profileViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.profileViewController) as? ProfileViewController
         

@@ -47,6 +47,19 @@ class SearchViewController: UIViewController {
               
                   view.window?.rootViewController = searchViewController
                   view.window?.makeKeyAndVisible()
+              case .business:
+                  let alert = UIAlertController(title: "Sign into Business Account", message: "please type your business name and the password you used to sign in", preferredStyle: .alert)
+                  
+                  alert.addTextField{(textField) in textField.placeholder = "Business Name"}
+                  alert.addTextField{(textField) in textField.placeholder = "Password"}
+                  
+                  alert.addAction(UIAlertAction(title: "Sign In", style: UIAlertAction.Style.default, handler: nil))
+                  self.present(alert, animated: true, completion: nil)
+              case .signOut:
+                  let startViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.startViewController) as? StartViewController
+              
+                  view.window?.rootViewController = startViewController
+                  view.window?.makeKeyAndVisible()
 
               }//end switch
         }

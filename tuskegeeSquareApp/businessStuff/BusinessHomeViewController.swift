@@ -15,13 +15,16 @@ import FirebaseFirestore
 class BusinessHomeViewController: UIViewController{
     let transition = SlideInTransition()
     
+    @IBOutlet weak var businessNameLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         view.backgroundColor = .white
         
    }
-
+    
+    
     @IBAction func didTapMenu(_ sender: UIBarButtonItem) {
        guard let menuViewController = storyboard?.instantiateViewController(identifier: "MenuViewController") as? MenuViewController else{ return }
         menuViewController.didTapBMenuType = {bMenuType in

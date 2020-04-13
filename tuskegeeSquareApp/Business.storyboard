@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="61" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Title" id="4SG-ah-IrO">
+                                    <navigationItem id="4SG-ah-IrO">
                                         <barButtonItem key="leftBarButtonItem" title="Menu" image="line.horizontal.3" catalog="system" id="WCi-09-Idv">
                                             <color key="tintColor" red="0.76687985749999998" green="0.049475843370000001" blue="0.070879589660000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
@@ -29,14 +29,36 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c77-kl-LBS">
+                                <rect key="frame" x="90" y="61" width="235" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7xW-jI-M9s">
+                                <rect key="frame" x="20" y="133" width="374" height="729"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dQk-wX-g7W">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="729"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </stackView>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="WhW-sr-g51"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Ya0-0A-HaP"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="G3s-Oj-Ce9"/>
                     </view>
+                    <connections>
+                        <outlet property="businessNameLabel" destination="c77-kl-LBS" id="yvA-bl-AAO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kzo-sg-SH7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-814" y="66"/>
+            <point key="canvasLocation" x="-814.49275362318849" y="65.625"/>
         </scene>
         <!--addSerVC-->
         <scene sceneID="xJx-5n-wgF">
@@ -249,7 +271,7 @@
                                                     <rect key="frame" x="0.0" y="3" width="297" height="73"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Service" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dr4-yg-EdE" userLabel="Add Service">
-                                                            <rect key="frame" x="31" y="19" width="144" height="36"/>
+                                                            <rect key="frame" x="15" y="19" width="144" height="36"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="20"/>
                                                             <nil key="textColor"/>
@@ -279,7 +301,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remove Service" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wbs-JX-e12" userLabel="Remove Service">
-                                                            <rect key="frame" x="33" y="19" width="158" height="36"/>
+                                                            <rect key="frame" x="16" y="19" width="158" height="36"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="18"/>
                                                             <nil key="textColor"/>
@@ -308,7 +330,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="299" height="73"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pXD-fF-KZ8">
-                                                            <rect key="frame" x="36" y="14" width="94.000000000000909" height="46"/>
+                                                            <rect key="frame" x="17" y="14" width="94.000000000000909" height="46"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="20"/>
                                                             <nil key="textColor"/>
@@ -337,7 +359,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="299" height="73"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student Page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eX2-lR-RxQ">
-                                                            <rect key="frame" x="37" y="14" width="156" height="46"/>
+                                                            <rect key="frame" x="14" y="14" width="156" height="46"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="20"/>
                                                             <nil key="textColor"/>
@@ -379,18 +401,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Business Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Qh-B2-FI0">
-                                <rect key="frame" x="146" y="438" width="122" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IEU-ni-LvQ">
                                 <rect key="frame" x="0.0" y="61" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Title" id="ieJ-a7-aak">
+                                    <navigationItem title="Business Profile" id="ieJ-a7-aak">
                                         <barButtonItem key="leftBarButtonItem" title="Menu" image="line.horizontal.3" catalog="system" id="oSQ-2t-aqM">
                                             <color key="tintColor" red="0.76687985749999998" green="0.049475843370000001" blue="0.070879589660000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>

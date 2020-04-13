@@ -20,15 +20,10 @@ class LoginViewController: UIViewController
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        setUpElements()
-    }//end viewDidLoad()
-    
-    func setUpElements(){
-        
         Utilities.styleTextField(userTextField)
         Utilities.styleTextField(passwTextField)
         Utilities.styleHollowButton(loginButton)
-    }//setUpElements()
+    }//end viewDidLoad()
     
     func validateFields() -> String?
     {

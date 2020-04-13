@@ -12,6 +12,8 @@ enum MenuType: Int{
     case home
     case businessSearch
     case profile
+    case business
+    case signOut
     
 }
 enum BMenuType: Int{

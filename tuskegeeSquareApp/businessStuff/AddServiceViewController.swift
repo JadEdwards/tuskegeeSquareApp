@@ -72,7 +72,19 @@
             let user = Auth.auth().currentUser
             
             db.collection("tuskegeeSquareServices").document(user!.uid).collection("services").addDocument(data:["serviceDescription": servicedes, "serviceName": servicename, "servicePrice": serviceprice, "serviceType": servicetype]);
-            
+            db.collection("tuskegeeSquareServices").document(user!.uid).collection("services").getDocuments { (snapshot, error) in
+                if error == nil && snapshot != nil{
+                    for document in snapshot!.documents{
+                        let documentData = document.data()
+                        print(documentData)
+                        
+
+                    }
+                }
+                else{
+                    print("Error")
+                }
+            }
             let bHomeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.busHomeViewController) as? BusinessHomeViewController
             
                 view.window?.rootViewController = bHomeViewController
