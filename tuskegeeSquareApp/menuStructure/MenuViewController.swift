@@ -27,6 +27,7 @@ class MenuViewController: UITableViewController {
     var didTapMenuType: ((MenuType) -> Void)?
     var didTapBMenuType: ((BMenuType) -> Void)?
     
+    @IBOutlet var swipe: UISwipeGestureRecognizer!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.backgroundColor = UIColor.white
@@ -47,6 +48,13 @@ class MenuViewController: UITableViewController {
         }
         
     }
+    /*@IBAction func swipeGuesture(_ sender: UISwipeGestureRecognizer) {
+        let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
+        
+        view.window?.rootViewController = homeViewController
+        view.window?.makeKeyAndVisible()
+    }*/
+    
 }
     
 

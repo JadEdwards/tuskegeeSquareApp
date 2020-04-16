@@ -12,7 +12,6 @@ class StartViewController: UIViewController {
     
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
-    @IBOutlet var registerT: UITapGestureRecognizer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,9 +19,6 @@ class StartViewController: UIViewController {
         Utilities.styleFilledButton(signUpButton)
         Utilities.styleHollowButton(signInButton)
 
-    }
-    @IBAction func tappedRegister(_ sender: Any) {
-    
     }
     
 }

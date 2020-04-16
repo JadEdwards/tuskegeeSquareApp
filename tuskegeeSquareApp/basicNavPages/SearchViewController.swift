@@ -12,6 +12,7 @@ class SearchViewController: UIViewController {
     
     let transition = SlideInTransition()
     
+    @IBOutlet var locations: [UIButton]!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -27,7 +28,43 @@ class SearchViewController: UIViewController {
             present(menuViewController, animated: true)
         }
                 
-        func transitionToNew(_ menuType: MenuType){
+    @IBAction func handleSelected(_ sender: UIButton) {
+        locations.forEach { (button) in
+            UIView.animate(withDuration: 0.2, animations: {
+                button.isHidden = !button.isHidden
+                self.view.layoutIfNeeded()
+            })
+        }
+    }
+    enum locationSelection: String {
+        case UniversityTerrace = "University Terrace"
+        case EastCommons = "East Commons"
+        case Younge = "Younge"
+        case Sage = "Sage"
+        case White = "White"
+    }
+    @IBAction func locationTapped(_ sender: UIButton) {
+        
+        guard let title = sender.currentTitle, let location = locationSelection(rawValue: title) else {
+            return
+        }
+        switch location{
+        case .UniversityTerrace:
+            print("University Terrace")
+        case .EastCommons:
+            print("East Commons")
+        case .Younge:
+            print("Younge")
+        case .Sage:
+            print("Sage")
+        case .White:
+            print("White")
+        }
+    }
+    
+    @IBAction func categoriesClicked(_ sender: UIButton) {
+    }
+    func transitionToNew(_ menuType: MenuType){
             let title = String(describing: menuType).capitalized
             self.title = title
             

@@ -11,17 +11,58 @@ import FirebaseAuth
 import Firebase
 import FirebaseDatabase
 import FirebaseFirestore
+import TinyConstraints
 
 class BusinessHomeViewController: UIViewController{
     let transition = SlideInTransition()
     
     @IBOutlet weak var businessNameLabel: UILabel!
     
+/*lazy var contentViewSize = CGSize(width: self.view.frame.width, height: self.view.frame.height + 400)
+    
+    lazy var scrollView: UIScrollView = {
+        let view = UIScrollView(frame: .zero)
+        view.backgroundColor = .white
+        view.frame = self.view.bounds
+        view.contentSize = contentViewSize
+        view.autoresizingMask = .flexibleHeight
+        view.showsHorizontalScrollIndicator = true
+        view.bounces = true
+        return view
+    }()
+    lazy var label: UILabel = {
+        let label = UILabel()
+        label.text = "documentData as? String"
+        return label
+    }()
+    lazy var containerView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .white
+        view.frame.size = contentViewSize
+        return view
+    }()*/
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         view.backgroundColor = .white
+        //view.addSubview(scrollView)
+        //scrollView.addSubview(containerView)
         
+        let db = Firestore.firestore()
+        let user = Auth.auth().currentUser
+        db.collection("tuskegeeSquareServices").document(user!.uid).collection("services").getDocuments { (snapshot, error) in
+                if error == nil && snapshot != nil{
+                    for document in snapshot!.documents{
+                        let documentData = document.data()
+                                                 
+                        print(documentData.values)
+                    }
+                }
+                else{
+                    print("Error")
+                }
+        }
    }
     
     

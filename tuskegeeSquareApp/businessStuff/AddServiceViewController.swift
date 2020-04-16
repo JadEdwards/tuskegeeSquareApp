@@ -5,10 +5,11 @@
 //  Created by Jade Edwards on 4/11/20.
 //  Copyright © 2020 Jade Edwards. All rights reserved.
     
- import UIKit
- import FirebaseAuth
- import Firebase
- import FirebaseDatabase
+import UIKit
+import FirebaseAuth
+import Firebase
+import FirebaseDatabase
+import TinyConstraints
 
  class AddServiceViewController: UIViewController {
      
@@ -26,6 +27,7 @@
          // Do any additional setup after loading the view.
          Utilities.styleFilledButton(cancelButton)
          Utilities.styleHollowButton(addSerButton)
+        
          ref = Database.database().reference()
      }
     
@@ -72,19 +74,8 @@
             let user = Auth.auth().currentUser
             
             db.collection("tuskegeeSquareServices").document(user!.uid).collection("services").addDocument(data:["serviceDescription": servicedes, "serviceName": servicename, "servicePrice": serviceprice, "serviceType": servicetype]);
-            db.collection("tuskegeeSquareServices").document(user!.uid).collection("services").getDocuments { (snapshot, error) in
-                if error == nil && snapshot != nil{
-                    for document in snapshot!.documents{
-                        let documentData = document.data()
-                        print(documentData)
-                        
-
-                    }
-                }
-                else{
-                    print("Error")
-                }
-            }
+            
+            
             let bHomeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.busHomeViewController) as? BusinessHomeViewController
             
                 view.window?.rootViewController = bHomeViewController
@@ -92,7 +83,7 @@
             
         }//end else, add fields to auth
     }
-    
+
     
     @IBAction func cancelPressed(_ sender: UIButton) {
         let bHomeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.busHomeViewController) as? BusinessHomeViewController
