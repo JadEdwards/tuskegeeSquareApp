@@ -16,6 +16,7 @@ import TinyConstraints
 class HomeViewController: UIViewController {
     var ref: DatabaseReference!
     let transition = SlideInTransition()
+    //var results = [Results]()
    /* lazy var contentViewSize = CGSize(width: self.view.frame.width, height: self.view.frame.height + 500)
     
     lazy var scrollView: UIScrollView = {

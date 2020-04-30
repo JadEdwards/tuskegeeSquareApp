@@ -18,14 +18,12 @@ import TinyConstraints
     @IBOutlet weak var serviceTypeTextField: UITextField!
     @IBOutlet weak var serviceDescriptionTextField: UITextField!
     @IBOutlet weak var addSerButton: UIButton!
-    @IBOutlet weak var cancelButton: UIButton!
     
     var ref: DatabaseReference!
     
     override func viewDidLoad() {
          super.viewDidLoad()
          // Do any additional setup after loading the view.
-         Utilities.styleFilledButton(cancelButton)
          Utilities.styleHollowButton(addSerButton)
         
          ref = Database.database().reference()
@@ -75,6 +73,11 @@ import TinyConstraints
             
             db.collection("tuskegeeSquareServices").document(user!.uid).collection("services").addDocument(data:["serviceDescription": servicedes, "serviceName": servicename, "servicePrice": serviceprice, "serviceType": servicetype]);
             
+            let alertController = UIAlertController(title: "Horray!!!",
+                                                    message: "Service successfully added", preferredStyle: UIAlertController.Style.alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+            
             
             let bHomeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.busHomeViewController) as? BusinessHomeViewController
             
@@ -85,10 +88,5 @@ import TinyConstraints
     }
 
     
-    @IBAction func cancelPressed(_ sender: UIButton) {
-        let bHomeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.busHomeViewController) as? BusinessHomeViewController
-        
-            view.window?.rootViewController = bHomeViewController
-            view.window?.makeKeyAndVisible()
-    }
+  
 }

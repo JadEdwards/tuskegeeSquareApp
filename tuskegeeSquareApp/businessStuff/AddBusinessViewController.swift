@@ -76,8 +76,6 @@ class AddBusinessViewController: UIViewController {
             db.collection("tuskegeeSquareBusiness").document(user!.uid).collection("businesses").addDocument(data:["businessName": businessname, "category": businessType, "location": businessLocation]);
             
             
-            
-            
             let busHomeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.busHomeViewController) as? BusinessHomeViewController
             
             view.window?.rootViewController = busHomeViewController

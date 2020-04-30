@@ -12,22 +12,18 @@ import Firebase
 import FirebaseDatabase
 
 class RemoveServiceViewController: UIViewController {
-    @IBOutlet weak var deleteButton: UIButton!
-    @IBOutlet weak var cancelButton: UIButton!
     
     var ref: DatabaseReference!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        Utilities.styleFilledButton(cancelButton)
-        Utilities.styleHollowButton(deleteButton)
-    }
-    @IBAction func removeServicePressed(_ sender: UIButton) {
-    }
-    @IBAction func cancelPressed(_ sender: UIButton) {
-        let bHomeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.busHomeViewController) as? BusinessHomeViewController
+        let alert = UIAlertController(title: "Remove Service", message: "Are you sure you wish to remove this service?", preferredStyle: .alert)
         
-            view.window?.rootViewController = bHomeViewController
-            view.window?.makeKeyAndVisible()
+        alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default, handler: nil))
+        alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.default, handler: nil))
+
+        self.present(alert, animated: true, completion: nil)
     }
+    
+    
 }

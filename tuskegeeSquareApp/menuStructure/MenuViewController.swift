@@ -17,8 +17,6 @@ enum MenuType: Int{
     
 }
 enum BMenuType: Int{
-    case addNew
-    case remove
     case profile
     case studentPage
 }
@@ -30,7 +28,7 @@ class MenuViewController: UITableViewController {
     @IBOutlet var swipe: UISwipeGestureRecognizer!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.backgroundColor = UIColor.white
+        self.tableView.backgroundColor = UIColor.systemYellow
         // Do any additional setup after loading the view.
     }
 
@@ -48,13 +46,6 @@ class MenuViewController: UITableViewController {
         }
         
     }
-    /*@IBAction func swipeGuesture(_ sender: UISwipeGestureRecognizer) {
-        let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
-        
-        view.window?.rootViewController = homeViewController
-        view.window?.makeKeyAndVisible()
-    }*/
-    
 }
     
 

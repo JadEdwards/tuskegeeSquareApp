@@ -14,41 +14,23 @@ import FirebaseFirestore
 import TinyConstraints
 
 class BusinessHomeViewController: UIViewController{
-    let transition = SlideInTransition()
-    
+    @IBOutlet weak var profileButtn: UIButton!
+   
     @IBOutlet weak var businessNameLabel: UILabel!
+    @IBOutlet weak var addServiceButton: UIButton!
     
-/*lazy var contentViewSize = CGSize(width: self.view.frame.width, height: self.view.frame.height + 400)
-    
-    lazy var scrollView: UIScrollView = {
-        let view = UIScrollView(frame: .zero)
-        view.backgroundColor = .white
-        view.frame = self.view.bounds
-        view.contentSize = contentViewSize
-        view.autoresizingMask = .flexibleHeight
-        view.showsHorizontalScrollIndicator = true
-        view.bounces = true
-        return view
-    }()
-    lazy var label: UILabel = {
-        let label = UILabel()
-        label.text = "documentData as? String"
-        return label
-    }()
-    lazy var containerView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .white
-        view.frame.size = contentViewSize
-        return view
-    }()*/
+    @IBOutlet weak var editBusinessButton: UIButton!
+    @IBOutlet weak var editServiceButton: UIButton!
+    @IBOutlet weak var removeServiceButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        view.backgroundColor = .white
-        //view.addSubview(scrollView)
-        //scrollView.addSubview(containerView)
-        
+        Utilities.styleHollowButton(addServiceButton)
+        Utilities.styleHollowButton(editBusinessButton)
+        Utilities.styleHollowButton(editServiceButton)
+        Utilities.styleHollowButton(removeServiceButton)
+
         let db = Firestore.firestore()
         let user = Auth.auth().currentUser
         db.collection("tuskegeeSquareServices").document(user!.uid).collection("services").getDocuments { (snapshot, error) in
@@ -64,55 +46,12 @@ class BusinessHomeViewController: UIViewController{
                 }
         }
    }
-    
-    
-    @IBAction func didTapMenu(_ sender: UIBarButtonItem) {
-       guard let menuViewController = storyboard?.instantiateViewController(identifier: "MenuViewController") as? MenuViewController else{ return }
-        menuViewController.didTapBMenuType = {bMenuType in
-                self.transitionToNew(bMenuType)
-            }
-        menuViewController.modalPresentationStyle = .overCurrentContext
-        menuViewController.transitioningDelegate = self
-        present(menuViewController, animated: true)
-    }
+   
+    @IBAction func businessProfileClicked(_ sender: Any) {
+        let businessProfileController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.businessProfileViewController) as? BusinessProfileViewController
         
-    func transitionToNew(_ menuType: BMenuType){
-        let title = String(describing: menuType).capitalized
-        self.title = title
-        
-        switch menuType{
-            
-            case .addNew:
-                let addViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.addServiceViewController) as? AddServiceViewController
-            
-                view.window?.rootViewController = addViewController
-                view.window?.makeKeyAndVisible()
-            case .remove:
-                let removeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.removeServiceViewController) as? RemoveServiceViewController
-            
-                view.window?.rootViewController = removeViewController
-                view.window?.makeKeyAndVisible()
-            case .profile:
-                let bProfileViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.businessProfileViewController) as? BusinessProfileViewController
-                
-                view.window?.rootViewController = bProfileViewController
-                view.window?.makeKeyAndVisible()
-           case .studentPage:
-                let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
-                
-                    view.window?.rootViewController = homeViewController
-                    view.window?.makeKeyAndVisible()
-            }//end switch
+            view.window?.rootViewController = businessProfileController
+            view.window?.makeKeyAndVisible()
     }
 }
 
-extension BusinessHomeViewController: UIViewControllerTransitioningDelegate{
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        transition.isPresenting = true
-        return transition
-    }
-    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        transition.isPresenting = false
-        return transition
-    }
-}
